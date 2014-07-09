@@ -10,5 +10,5 @@ rule "FilterAppraisers"
 		$taskOwner : Appraiser( first == null )
 	then
 		$taskOwner.setFirst( $a.first );
-		update( $taskOwner );
+		System.out.println("Task assigned to: "+$taskOwner.first);
 end
