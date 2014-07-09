@@ -4,6 +4,7 @@ import com.gnw.domain.Property;
 
 rule "FilterAppraisers"
 	dialect "mvel"
+	ruleflow-group "findAppraiser"
 	when
 		$p : Property( )
 		$a : Appraiser( province == $p.address )
