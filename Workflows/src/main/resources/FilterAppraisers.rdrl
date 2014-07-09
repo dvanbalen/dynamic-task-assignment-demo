@@ -1,4 +1,6 @@
 import java.lang.Number;
+import com.gnw.domain.Appraiser;
+import com.gnw.domain.Property;
 
 rule "FilterAppraisers"
 	dialect "mvel"
