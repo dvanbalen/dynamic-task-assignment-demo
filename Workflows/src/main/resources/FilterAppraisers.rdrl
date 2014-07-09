@@ -1,7 +1,0 @@
-import java.lang.Number;
-
-rule "FilterAppraisers"
-	dialect "mvel"
-	when
-	then
-end
