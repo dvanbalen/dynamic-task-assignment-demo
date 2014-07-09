@@ -7,6 +7,13 @@
   <version>1.0</version>
   <packaging>kjar</packaging>
   <name>Workflows</name>
+  <dependencies>
+    <dependency>
+      <groupId>com.gnw</groupId>
+      <artifactId>gnw-domain</artifactId>
+      <version>0.9</version>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
