@@ -5,9 +5,10 @@ import com.gnw.domain.Property;
 rule "FilterAppraisers"
 	dialect "mvel"
 	when
-		$p : Property()
-		$a : Appraiser(province == $p.province)
+		$p : Property( )
+		$a : Appraiser( province == $p.address )
+		$taskOwner : Appraiser( first == null )
 	then
-		taskOwner = $a.first;
-		System.out.println("Task assigned to "+taskOwner);
+		$taskOwner.setFirst( $a.first );
+		update( $taskOwner );
 end
