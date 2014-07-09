@@ -10,6 +10,6 @@ rule "FilterAppraisers"
 		$a : Appraiser( province == $p.address )
 		$taskOwner : Appraiser( first == null )
 	then
-		$taskOwner.setFirst( a.getFirst( );
+		$taskOwner.setFirst( $a.getFirst() );
 		System.out.println("Task assigned to: "+$taskOwner.first);
 end
