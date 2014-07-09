@@ -3,5 +3,9 @@ import java.lang.Number;
 rule "FilterAppraisers"
 	dialect "mvel"
 	when
+		$p : Property()
+		$a : Appraiser(province eq $p.province)
 	then
+		taskOwner = $a.first;
+		System.out.println("Task assigned to "+taskOwner);
 end
