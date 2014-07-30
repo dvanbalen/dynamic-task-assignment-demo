@@ -3,5 +3,5 @@ ruleflow-group "findAppraiser"
 when
     String()
 then
-    System.out.println("Found a String");
+    System.out.println("Found a String. Testing 123!");
 end
